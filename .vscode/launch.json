@@ -7,6 +7,60 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "ccxt exchanges",
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "args": ["--exchanges"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "USDC/ZAR @ luno",
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "args": ["--fetch_usdc_zar",]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "show symbols for luno",
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "args": ["--exchange=luno", "--list_symbols"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "get USDC/ZAR at luno",
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "args": ["--exchange=luno", "--fetch_ticker=USDC/ZAR"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "get ETH/USDC at luno",
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "args": ["--exchange=luno", "--fetch_ticker=ETH/USDC"]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "fetch USDC from luno",
+      "program": "${workspaceFolder}\\dist\\index.js",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+      "args": ["--exchange=luno", "symbol="]
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "say-name",
       "program": "${workspaceFolder}\\dist\\index.js",
       "preLaunchTask": "tsc: build - tsconfig.json",
